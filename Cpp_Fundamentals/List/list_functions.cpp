@@ -2,10 +2,8 @@
 
     list<int> l = {1, 2, 3};
 
-    unlike vector (which is a dynamic ARRAY, backed by one
-    continuous block of memory), list is a DOUBLY LINKED LIST.
-    each element is its own separate node in memory, and every
-    node stores:
+    unlike vector (which is a dynamic ARRAY, backed by one continuous block of memory), list is a DOUBLY LINKED LIST.
+    each element is its own separate node in memory, and every node stores:
       - the value
       - a pointer to the NEXT node
       - a pointer to the PREVIOUS node
@@ -13,21 +11,14 @@
     list forwards AND backwards)
 
     WHY USE list INSTEAD OF vector:
-    - inserting/deleting at the FRONT or in the MIDDLE is O(1) for
-      list (you just relink a couple of pointers), whereas for a
-      vector it's O(n) (every element after the insertion point
-      has to physically shift over in memory)
-    - list has NO random access — you can't do l[2] like a vector.
-      to reach the 3rd element you have to walk node by node from
-      the front (or back), which is O(n). vector gives O(1) random
-      access via indexing because it's one contiguous block.
-    - list uses more memory per element (extra space for the two
-      pointers in every node) and has worse cache performance,
-      since nodes can be scattered anywhere in memory instead of
-      sitting next to each other like a vector's elements do.
+    - inserting/deleting at the FRONT or in the MIDDLE is O(1) for list (you just relink a couple of pointers), whereas for a
+      vector it's O(n) (every element after the insertion point has to physically shift over in memory)
+    - list has NO random access — you can't do l[2] like a vector. To reach the 3rd element you have to walk node by node from
+      the front (or back), which is O(n). vector gives O(1) random access via indexing because it's one contiguous block.
+    - list uses more memory per element (extra space for the two pointers in every node) and has worse cache performance,
+      since nodes can be scattered anywhere in memory instead of sitting next to each other like a vector's elements do.
 
-    so: pick vector by default: pick list specifically when you need
-    fast insert/delete at both ends or in the middle, and don't need
+    so: pick vector by default: pick list specifically when you need fast insert/delete at both ends or in the middle, and don't need
     random indexing.
 
     ============================================================
