@@ -1,7 +1,5 @@
-/*
-    ============================================================
-    LIST — DOUBLY LINKED LIST (STL container)
-    ============================================================
+/*  LIST — DOUBLY LINKED LIST (STL container)
+
     list<int> l = {1, 2, 3};
 
     unlike vector (which is a dynamic ARRAY, backed by one
