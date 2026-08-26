@@ -22,7 +22,7 @@ vector<vector<int>> threeSum(vector<int>& nums) {
     // sort first — enables two pointers + adjacent duplicates easy to skip
     sort(nums.begin(), nums.end());
 
-    for(int i = 0; i < n-2; i++) {
+    for(int i = 0; i < n; i++) {
 
         // skip duplicate i — same nums[i] gives same triplets again
         // i>0 guard prevents checking nums[-1]
